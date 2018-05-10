@@ -84,8 +84,8 @@ void InputHandler::processTouchEvent(QTouchEvent * event)
         }
 
         PathDataPoint p;
-        p.x = tp.scenePos().x();
-        p.y = tp.scenePos().y();
+        p.x = tp.pos().x();
+        p.y = tp.pos().y();
 
         p.pressure = tp.pressure();
         p.rotation = tp.rotation();
@@ -114,7 +114,7 @@ QTouchEvent * InputHandler::convertEvent(QGraphicsSceneMouseEvent * event)
     // touch ids getting mixed in fringe use cases
     t.setId(-210787);
 
-    t.setPos(event->pos());
+    t.setPos(event->scenePos());
     t.setScenePos(event->scenePos());
     t.setScreenPos(event->screenPos());
 
