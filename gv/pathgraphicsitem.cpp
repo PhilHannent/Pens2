@@ -7,13 +7,13 @@
 PathGraphicsItem::PathGraphicsItem()
     : m_data(nullptr)
 {
-    qInfo() << "PathGraphicsItem::PathGraphicsItem()";
+    //qInfo() << "PathGraphicsItem::PathGraphicsItem()";
     this->setFlag(ItemIsMovable);
 }
 
 PathGraphicsItem::~PathGraphicsItem()
 {
-    qInfo() << "PathGraphicsItem::~PathGraphicsItem()";
+    //qInfo() << "PathGraphicsItem::~PathGraphicsItem()";
 }
 
 void PathGraphicsItem::addPoint(const PathDataPoint & point)

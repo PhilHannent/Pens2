@@ -5,12 +5,12 @@
 
 PathQuickItem::PathQuickItem()
 {
-    qInfo() << "PathQuickItem::PathQuickItem()";
+    //qInfo() << "PathQuickItem::PathQuickItem()";
 }
 
 PathQuickItem::~PathQuickItem()
 {
-    qInfo() << "PathQuickItem::~PathQuickItem()";
+    //qInfo() << "PathQuickItem::~PathQuickItem()";
 }
 
 PathDataWeakPointer PathQuickItem::data() const

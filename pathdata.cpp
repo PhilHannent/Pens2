@@ -5,12 +5,12 @@
 PathData::PathData()
     : m_dirty(true)
 {
-    qInfo() << "PathData::PathData()";
+    //qInfo() << "PathData::PathData()";
 }
 
 PathData::~PathData()
 {
-    qInfo() << "PathData::~PathData()";
+    //qInfo() << "PathData::~PathData()";
 }
 
 QRectF PathData::boundingRect() const
