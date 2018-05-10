@@ -22,8 +22,8 @@ class PathDataPoint
         qreal x;
         qreal y;
         qreal pressure;
-        qreal rotation;
-        qint64 timestamp;
+        float rotation; // using a float here makes the type fit into 64 bits
+        quint32 timestamp;
         QSizeF area;
         QVector2D velocity;
         Type type;
