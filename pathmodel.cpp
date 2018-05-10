@@ -1,5 +1,7 @@
 #include "pathmodel.h"
 
+#include "testdataprovider.h"
+
 PathModel * PathModel::model()
 {
     static PathModel * model = new PathModel();
@@ -12,6 +14,8 @@ void PathModel::save()
 
 void PathModel::load()
 {
+    this->clear();
+    this->addPathData(TestDataProvider::getTestData2());
 }
 
 void PathModel::clear()

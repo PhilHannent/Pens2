@@ -62,8 +62,10 @@ void PathData::updateInner() const
 
     m_path = QPainterPath();
 
-    for (const PathDataPoint & p : qAsConst(m_dataPoints))
+    for (int i = 0; i < m_dataPoints.size(); i++)
     {
+        const PathDataPoint & p = m_dataPoints[i];
+
         switch (p.type)
         {
             case p.Move:
@@ -75,6 +77,21 @@ void PathData::updateInner() const
             case p.Line:
             {
                 m_path.lineTo(p.x, p.y);
+                break;
+            }
+
+            case p.Curve:
+            {
+                const PathDataPoint & p1 = m_dataPoints[i + 1];
+                const PathDataPoint & p2 = m_dataPoints[i + 2];
+                m_path.cubicTo(p1.x, p1.y, p2.x, p2.y, p.x, p.y);
+                i += 2;
+                break;
+            }
+
+            case p.CurveData:
+            {
+                qFatal("Should not reach here");
                 break;
             }
         }

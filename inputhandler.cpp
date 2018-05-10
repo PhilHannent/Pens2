@@ -88,7 +88,7 @@ void InputHandler::processTouchEvent(QTouchEvent * event)
         p.y = tp.pos().y();
 
         p.pressure = tp.pressure();
-        p.rotation = tp.rotation();
+        p.rotation = static_cast<float>(tp.rotation());
         p.timestamp = 0;
         p.area = tp.ellipseDiameters();
         p.velocity = tp.velocity();

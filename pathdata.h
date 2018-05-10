@@ -16,7 +16,9 @@ class PathDataPoint
         enum Type
         {
             Move,
-            Line
+            Line,
+            Curve,
+            CurveData
         };
 
         qreal x;
