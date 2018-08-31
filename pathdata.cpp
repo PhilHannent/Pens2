@@ -68,19 +68,19 @@ void PathData::updateInner() const
 
         switch (p.type)
         {
-            case p.Move:
+            case PathDataPoint::Move:
             {
                 m_path.moveTo(p.x, p.y);
                 break;
             }
 
-            case p.Line:
+            case PathDataPoint::Line:
             {
                 m_path.lineTo(p.x, p.y);
                 break;
             }
 
-            case p.Curve:
+            case PathDataPoint::Curve:
             {
                 const PathDataPoint & p1 = m_dataPoints[i + 1];
                 const PathDataPoint & p2 = m_dataPoints[i + 2];
@@ -89,7 +89,7 @@ void PathData::updateInner() const
                 break;
             }
 
-            case p.CurveData:
+            case PathDataPoint::CurveData:
             {
                 qFatal("Should not reach here");
                 break;

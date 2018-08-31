@@ -1,5 +1,7 @@
 #include "testdataprovider.h"
 
+#include <cmath>
+
 PathDataPointer TestDataProvider::getTestData()
 {
     PathData * data = new PathData();
