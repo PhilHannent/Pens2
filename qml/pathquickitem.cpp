@@ -31,6 +31,9 @@ void PathQuickItem::setData(const PathDataWeakPointer & data)
     {
         const qreal p = PathData::defaultPen().widthF();
         QRectF br = m_data->boundingRect() + QMarginsF(p, p, p, p);
+        static int i = 0;
+        i++;
+        qDebug() << "Op:" << i;
 
         this->setPosition(br.topLeft());
         this->setWidth(br.width());
